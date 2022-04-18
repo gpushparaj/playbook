@@ -1,1 +1,12 @@
 ---
+-hosts: all
+ become: yes
+ tasks:
+ - name: i want to install webserver on RHEL
+   yum: 
+     name: httpd
+     state: present
+ - name: start the httpd service after installing
+   service:
+     name: httpd
+     state: started
