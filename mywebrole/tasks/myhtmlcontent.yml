@@ -1,8 +1,9 @@
 ---
 - name: crating a j2 file
   file:
+    name: j2file
     path: /home/raj/
-    touch: mycontent.html
+    state: touch
 
 - name: replacing my contect on webserver
   template:
