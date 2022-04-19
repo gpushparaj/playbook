@@ -1,4 +1,4 @@
 ---
 # tasks file for mywebrole
-- include_tasks: webserveronrhel
-- include_tasks: myhtmlcontent
+- include_tasks: webserveronrhel.yml
+- include_tasks: myhtmlcontent.yml
