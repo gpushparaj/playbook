@@ -1,13 +1,13 @@
 ---
-- hosts: 172.31.32.87
+- hosts: webserver
   become: yes
   tasks:
   - name: i want to install webserver on RHEL
     yum: 
-      name: "{{webserverforredhat}}"
+      name: "{{webserverfor redhat}}"
       state: present
   - name: start the httpd service after installing
     service:
-      name: "{{webserverforredhat}}"
+      name: "{{webserverfor redhat}}"
       state: started
  
