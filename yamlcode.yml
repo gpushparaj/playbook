@@ -1,17 +1,13 @@
 ---
--hosts: all
- become: yes
- tasks:
- - name: i want to install webserver on RHEL
-   yum: 
-     name: httpd
-     state: present
- - name: start the httpd service after installing
-   service:
-     name: httpd
-     state: started
- - name: Start service foo, based on running process /usr/bin/foo
-   service:
-     name: foo
-     pattern: /usr/bin/foo
-     state: started
+- hosts: mywebserver
+  become: yes
+  tasks:
+  - name: i want to install webserver on RHEL
+    yum: 
+      name: "{{webserverfor redhat}}"
+      state: present
+  - name: start the httpd service after installing
+    service:
+      name: "{{webserverfor redhat}}"
+      state: started
+ 
