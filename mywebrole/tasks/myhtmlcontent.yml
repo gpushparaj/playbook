@@ -1,10 +1,10 @@
 ---
-- name: crating a html file
+- name: crating a j2 file
   file:
     path: /home/raj/
     touch: mycontent.html
 
 - name: replacing my contect on webserver
   template:
-    src: /home/raj/mycontent.html
+    src: content.j2
     dest: /var/www/html/index.html
