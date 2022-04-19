@@ -1,0 +1,10 @@
+---
+- name: crating a html file
+  file:
+    path: /home/raj/
+    touch: mycontent.html
+
+- name: replacing my contect on webserver
+  template:
+    src: /home/raj/mycontent.html
+    dest: /var/www/html/index.html

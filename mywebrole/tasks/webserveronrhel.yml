@@ -1,0 +1,5 @@
+---
+- name: install webserver on RHEL
+  yum: 
+    name: httpd
+    state: present
